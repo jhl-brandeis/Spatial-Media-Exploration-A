@@ -18,3 +18,24 @@ document.addEventListener("DOMContentLoaded", () => {
     //     });
     // });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Fullscreen support for videos
+    document.querySelectorAll('.spatialVideo').forEach(video => {
+        video.addEventListener('click', () => {
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            } else if (video.webkitRequestFullscreen) {
+                video.webkitRequestFullscreen();
+            }
+        });
+    });
+
+    // Open Spatial Video in a new tab
+    document.querySelectorAll('.openSpatialVideo').forEach(link => {
+        link.addEventListener('click', event => {
+            event.preventDefault();
+            window.open(link.href, '_blank');
+        });
+    });
+});
