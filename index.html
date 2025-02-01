@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spatial Photo Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Spatial Photo Viewer</h1>
+
+    <!-- Display Spatial HEIC with JPEG Fallback -->
+    <picture>
+        <source srcset="images/spatial/B1.heic" type="image/heic">
+        <img src="images/spatial/B1.jpeg" class="fullscreenTarget" width="100%" alt="Spatial Photo">
+    </picture>
+
+    <!-- Clickable HEIC File for Vision Pro -->
+    <p><strong>Click below to open the HEIC file directly:</strong></p>
+    <a href="images/spatial/B1.heic" class="openHeicLink">Open Spatial HEIC</a>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
