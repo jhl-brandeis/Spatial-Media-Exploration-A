@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    console.log(navigator.userAgent);
 
     if (navigator.userAgent.includes("VisionOS")) {
         document.querySelectorAll('.fullscreenTarget').forEach(img => {
