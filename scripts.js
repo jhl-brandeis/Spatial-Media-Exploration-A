@@ -1,21 +1,38 @@
 document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll('.fullscreenTarget').forEach(img => {
-        img.addEventListener('click', () => {
-            if (img.requestFullscreen) {
-                img.requestFullscreen();
-            // } else if (img.webkitRequestFullscreen) {
-            //     img.webkitRequestFullscreen();
-            }
+    
+    if (navigator.userAgent.includes("visionOS")) {
+        document.querySelectorAll('.fullscreenTarget').forEach(img => {
+            img.addEventListener('click', () => {
+                if (img.requestFullscreen) {
+                    img.requestFullscreen();
+                }
+            });
         });
-    });
+    }
+
+
+    
+
+
+
+
+    // WORKS!
+    // document.querySelectorAll('.fullscreenTarget').forEach(img => {
+    //     img.addEventListener('click', () => {
+    //         if (img.requestFullscreen) {
+    //             img.requestFullscreen();
+    //         }
+    //     });
+    // });
+
+
+
 
     // fullscreenTarget.addEventListener('click', () => {
     //     if (img.requestFullscreen) {
     //         img.requestFullscreen();
     //     }
     // });
-
-
 
     // // Enable fullscreen on image click
     // document.querySelectorAll('.fullscreenTarget').forEach(img => {
