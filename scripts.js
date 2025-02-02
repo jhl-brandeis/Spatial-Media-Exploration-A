@@ -9,6 +9,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // fullscreenTarget.addEventListener('click', () => {
+    //     if (img.requestFullscreen) {
+    //         img.requestFullscreen();
+    //     }
+    // });
+
 
 
     // // Enable fullscreen on image click
