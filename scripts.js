@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-    console.log(navigator.userAgent);
+    const isVisionOS = !!window.navigator.maxTouchPoints && window.navigator.userAgent.includes("Macintosh");
 
-    if (navigator.userAgent.includes("VisionOS")) {
-        document.querySelectorAll('.fullscreenTarget').forEach(img => {
-            img.addEventListener('click', () => {
-                if (img.requestFullscreen) {
-                    img.requestFullscreen();
+    if (isVisionOS) {
+        document.querySelectorAll('.fullscreenTarget').forEach(media => {
+            media.addEventListener('click', () => {
+                if (media.requestFullscreen) {
+                    media.requestFullscreen();
                 }
             });
         });
